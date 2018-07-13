@@ -2,7 +2,7 @@
 Door and Window sensor sends open and close code to home automation system
 
 ## Function
-This is a little device with a reed switch one one side of the door/window and a magnet one the other side. When the door/window
+This is a little device with a reed switch one one side of the door/window and a magnet on the other side. When the door/window
 opens a code will be sent through the 433MHz transciever. When the door/window closes another code will be sent. There is also
 an optional tampering switch possible.
 The sensors work together with https://github.com/mrohner/433MHz-MQTT-Bridge-with-Wemos-D1 in order to relay the door/window status to
