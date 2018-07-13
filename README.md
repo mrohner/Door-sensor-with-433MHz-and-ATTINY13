@@ -12,7 +12,7 @@ MQTT and eventually to Domoticz.
 I used an ATTINY13A and attached a reed switch as well as a 433MHz transciever. All runs off a 3V CR2032 battery. Of course the ATTINY
 is asleep most of the time. I attach an Eagle Cad file FYI. The protocol used is understandable by most receivers, see also
 https://github.com/sui77/rc-switch
-.
+```
 /* Format for protocol definitions:
  * {pulselength, Sync bit, "0" bit, "1" bit}
  * 
@@ -32,6 +32,6 @@ https://github.com/sui77/rc-switch
  *
  * These are combined to form Tri-State bits when sending or receiving codes.
  */
-
+```
 ## Library used
 You will need this library: https://github.com/NicoHood/PinChangeInterrupt
