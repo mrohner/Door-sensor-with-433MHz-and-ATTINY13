@@ -34,3 +34,15 @@ https://github.com/sui77/rc-switch and https://github.com/sweetpi/attiny-433mhz-
 ```
 ## Library used
 You will need this library: https://github.com/NicoHood/PinChangeInterrupt
+
+## Parts used
+* PCB board
+* ATTINY13A microcontroller SOP-8
+* Reed Switch
+* 10K Ohm resistor SMD 0805
+* Battery holder SMD for CR2032
+* Battery CR2032 3V
+* 433Mhz transmitter module H34B
+* Little housing
+* Magnet (I use a furniture door closing magnet)
+
