@@ -39,7 +39,7 @@ You will need this library: https://github.com/NicoHood/PinChangeInterrupt
 * PCB board
 * ATTINY13A microcontroller SOP-8
 * Reed Switch
-* 10K Ohm resistor SMD 0805
+* 2 x 10K Ohm resistor SMD 0805
 * Battery holder SMD for CR2032
 * Battery CR2032 3V
 * 433Mhz transmitter module H34B
