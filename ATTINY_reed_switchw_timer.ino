@@ -45,9 +45,9 @@ const byte START = 31;
 const byte _SHORT = 1;
 const byte _LONG = 3;
 // The code you may change per device
-//const byte OPEN =  0b00000001;//Decimal: 65793  (24Bit) Binary: 000000010000000100000001
-//const byte CLOSE = 0b00000010;//Decimal: 131586 (24Bit) Binary: 000000100000001000000010
-//const byte ALIVE = 0b00000011;//Decimal: 197379 (24Bit) Binary: 000000110000001100000011
+const byte OPEN =  0b00000001;//Decimal: 65793  (24Bit) Binary: 000000010000000100000001
+const byte CLOSE = 0b00000010;//Decimal: 131586 (24Bit) Binary: 000000100000001000000010
+const byte ALIVE = 0b00000011;//Decimal: 197379 (24Bit) Binary: 000000110000001100000011
 
 
 void setup(){
@@ -68,9 +68,9 @@ void setup(){
 void loop() {
   // change into sleep mode
   PORTB &= ~(1 << TRANS_PIN); // Set TRANS_PIN low
-  ADCSRA &= ~(1<<ADEN);       // Power reduction disable ADC
+  ADCSRA &= ~(1<<ADEN);       // Power reduction: disable ADC
   sleep_mode();               // Processor goes to sleep here
-  ADCSRA |= (1 << ADEN);      // Power reduction ADC enable
+  ADCSRA |= (1 << ADEN);      // ADC enable
   disable_PinChange_interrupts ();
   if (message){
     send(message);
@@ -78,18 +78,18 @@ void loop() {
  //   _delay_ms(50);
   }
   if (time_counter > 60) {// ca. 10 minutes
-    send(0b00000011);//Decimal: 197379 (24Bit) Binary: 000000110000001100000011)
+    send(ALIVE);
     time_counter = 0;
   }
   enable_PinChange_interrupts ();  
 }
 
 void tick(void) {
-  message = 0b00000001;//Decimal: 65793  (24Bit) Binary: 000000010000000100000001
+  message = OPEN;
 }
 
 void tock(void) {
-  message = 0b00000010;//Decimal: 131586 (24Bit) Binary: 000000100000001000000010
+  message = CLOSE;
 }
 
 
